@@ -1,0 +1,68 @@
+# Task 1
+# Write a program that takes a list of numbers (for example, a = [5, 10, 15, 20, 25])
+# and makes a new list of only the first and last elements of the given list. For practice, write this code inside a function.
+
+def list_elements(a):
+    return (a[0],a[-1])
+    
+c = [5, 10, 15, 20, 25]
+
+print(list_elements(c))
+---------------------------------------------------------------------------------------------------------------------------
+# Task 2
+# Write a program (using functions!) that asks the user for a long string containing multiple words.
+# Print back to the user the same string, except with the words in backwards order. For example, say I type the string:
+# My name is Michele
+# Then I would see the string:
+#  Michele is name My
+# shown back to me.
+
+def rev(str1):
+    l = list(str1.split(' '))
+    l.reverse()
+    y = ' '.join(l)
+    return y
+
+s = input("enter any string:")
+
+print(rev(s))
+---------------------------------------------------------------------------------------------------------------------------
+# Task 3
+# Take two lists, say for example these two:
+# a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+# b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+# and write a program that returns a list that contains only the elements that are common between the lists (without duplicates).
+# Make sure your program works on two lists of different sizes.
+# Extras:
+#   1. Randomly generate two lists to test this
+#   2. Write this in one line of Python
+
+#1st
+import random
+a = random.sample(range(1,15), 9)
+b = random.sample(range(1,15), 6)
+c = list(set(a).intersection(b))
+print(a)
+print(b)
+print(c)
+
+#2nd - one  line of code
+a = [1, 1, 2, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+c = list(set(a).intersection(b)) 
+print(c)
+--------------------------------------------------------------------------------------------------------------------------------
+# Task 4
+
+# Rock Paper Scissors
+
+# Make a two-player Rock-Paper-Scissors game. (Hint: Ask for player plays (using input),
+# compare them, print out a message of congratulations to the winner, and ask if the players want to start a new game.
+
+# Remember the rules:
+#
+# - Rock beats scissors
+# - Scissors beats paper
+# - Paper beats rock
+
+
