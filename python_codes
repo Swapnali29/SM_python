@@ -111,18 +111,22 @@ soup = BeautifulSoup(page.text,'html.parser')
 news_titles_list = soup.find_all(class_='storylink')
 #print(news_titles_list)
 
-#news_titles_list_items = news_titles_list.find_all('a')
-#print(news_titles_list_items)
 for news_titles in news_titles_list:
      print(news_titles)
+     
+------------------------------------------------------------------------------------------------------------------------------------------------------
+# Task 6
 
- 
- 
- 
+# Write the Task 5 titles to the text file.
+
+# Extras:
+# Ask the user to specify the name of the output file that will be saved.
 
 
 
------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 # Task 7
 
 # Write a password generator in Python. Be creative with how you generate passwords - strong passwords have a mix of lowercase letters, uppercase letters, numbers, and symbols.
@@ -196,3 +200,52 @@ def main():
         
 if __name__ == "__main__":
     main()
+    
+------------------------------------------------------------------------------------------------------------------------------------------------
+# Task 8
+
+# Please write a program to compress and decompress the string "Music industry hails passage of the Music Modernization Act".
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+# Task 9
+
+# Please write a binary search function which searches an item in a sorted list.
+# The function should return the index of element to be searched in the list.
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+# Task 10
+
+# Assuming that we have some email addresses in the "username@companyname.com" format,
+# please write program to print the company name of a given email address. Both user names and company names are composed of letters only.
+
+# Example:
+# If the following email address is given as input to the program:
+
+# akita@securitybrigade.com
+
+# Then, the output of the program should be:
+
+# securitybrigade
+
+# In case of input data being supplied to the question, it should be assumed to be a console input.
+
+import re
+
+emailAddress = input()
+
+pat2 = "(\w+)@((\w+)+(.com))"
+
+r2 = re.match(pat2,emailAddress)
+
+print (r2.group(3))
+
+
+
