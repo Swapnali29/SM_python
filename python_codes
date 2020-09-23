@@ -286,5 +286,24 @@ r2 = re.match(pat2,emailAddress)
 
 print (r2.group(3))
 
+------------------------------------------------------------------------------------------------------------
+from path import path
+import time
+
+#Change the DAYS to your liking
+DAYS = 6
+removed = 0
+d = path(DIRECTORY)
+#Replace DIRECTORY with your required directory
+time_in_secs = time.time() - (DAYS * 24 * 60 * 60)
+
+for i in d.walk():
+    if i.isfile():
+        if i.mtime <= time_in_secs:
+            i.remove()
+            removed += 1
+
+print removed
+
 
 
